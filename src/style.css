@@ -1,6 +1,16 @@
+/* @font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto-LightItalic.ttf') format('ttf');
+    font-weight: 600;
+    font-style: normal;
+  } */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
 body{
     margin:0;
     padding: 0;
+}
+.main{
+    font-family: 'Roboto', sans-serif;
 }
 .content{
     background: url('./icon.jpeg');
