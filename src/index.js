@@ -7,38 +7,49 @@ var mainPage = true;
 var aboutPage = false;
 var menuPage = false;
 let body = document.querySelector('.main');
+
 function deleteCurrentContent(){
     while (body.lastChild.id != "head") {
         body.removeChild(body.lastChild);
       }
     return;
 }
+
 function tabHandler(e){
     if(e.target.id == "MainPage"){
-        mainPage = true;
-        aboutPage = false;
-        menuPage = false;
-        deleteCurrentContent();
-        body.appendChild(mainaPage());
+        if (!mainPage){
+            mainPage = true;
+            aboutPage = false;
+            menuPage = false;
+            console.log(mainPage, aboutPage, menuPage);
+            deleteCurrentContent();
+            body.appendChild(mainaPage());
+        }
         return;
     }
     if(e.target.id == "AboutPage"){
-        mainPage = false;
-        aboutPage = true;
-        menuPage = false;
-        deleteCurrentContent();
-        body.appendChild(aboutPages());
+        if (!aboutPage){
+            mainPage = false;
+            aboutPage = true;
+            menuPage = false;
+            console.log(mainPage, aboutPage, menuPage);
+            deleteCurrentContent();
+            body.appendChild(aboutPages());
+        }
         return;
     }
     if(e.target.id == "Menu"){
-        mainPage = false;
-        aboutPage = false;
-        menuPage = true;
-        deleteCurrentContent();
-        body.appendChild(menuPages());
+        if (!menuPage){
+            mainPage = false;
+            aboutPage = false;
+            menuPage = true;
+            deleteCurrentContent();
+            body.appendChild(menuPages());
+        }
         return;
     }
 }
+
 function comp(){
     let header = document.createElement('div');
     header.id = "head";
