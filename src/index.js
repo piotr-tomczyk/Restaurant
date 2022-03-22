@@ -16,12 +16,12 @@ function deleteCurrentContent(){
 }
 
 function tabHandler(e){
-    if(e.target.id == "MainPage"){
+    console.log(e.target.id);
+    if(e.target.id == "MainPage" || e.target.id == "left"){
         if (!mainPage){
             mainPage = true;
             aboutPage = false;
             menuPage = false;
-            console.log(mainPage, aboutPage, menuPage);
             deleteCurrentContent();
             body.appendChild(mainaPage());
         }
@@ -32,7 +32,6 @@ function tabHandler(e){
             mainPage = false;
             aboutPage = true;
             menuPage = false;
-            console.log(mainPage, aboutPage, menuPage);
             deleteCurrentContent();
             body.appendChild(aboutPages());
         }
@@ -56,6 +55,7 @@ function comp(){
     let title = document.createElement('div');
     title.id = "left";
     title.textContent = "RESTAURACJA MUADIB";
+    title.addEventListener("click", tabHandler);
     let listOfMenu = document.createElement('div');
     listOfMenu.id = "menu";
 

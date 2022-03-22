@@ -4,10 +4,48 @@ body{
 }
 .content{
     background: url('./icon.jpeg');
-    height: 100vh;
+    min-height: 100vh;
 }
 #head{
     background: lightgoldenrodyellow;
+    display:flex;
+    justify-content: space-between;
+    padding: 1rem;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+}
+#title{
+    padding-top: 3em;
+    text-align: center;
+}
+.component{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    background-color: antiquewhite;
+    margin-left: 35vw;
+    margin-right: 35vw;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: orange;
+    border-width: 4px;
+    margin-bottom: 1.5rem;
+    margin-top:1.5rem;
+}
+.textContent{
+    padding-bottom: 1rem;
+}
+#menu{
+    display:flex;
+    gap: 1em;
+    padding-right: 2em;
+}
+.photo{
+    width: 15vw;
 }
 .content {
     color: red;

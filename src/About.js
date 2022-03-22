@@ -1,17 +1,15 @@
+import createComponent from './component';
+
 export default function aboutPages(){
     console.log("i exist: aboutPage");
     let content = document.createElement('div');
     content.id = "aboutPage";
     content.className = "content";
-    let title = document.createElement('div');
+    let title = document.createElement('h2');
     title.id = "title";
     title.textContent = "RESTAURACJA MUADIB";
-
-    let desc = document.createElement('div');
-    desc.textContent = "alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah,alah";
-    desc.id = "description";
-
+    
     content.appendChild(title);
-    content.appendChild(desc);
+    content.appendChild(createComponent("CONTACT",false,"Piotr Tomczyk: s175816@student.pg.edu.pl \n Adress: Arrakis, Cave"));
     return content;
 }
