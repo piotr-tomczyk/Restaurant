@@ -1,0 +1,20 @@
+body{
+    margin:0;
+    padding: 0;
+}
+.content{
+    background: url('./icon.jpeg');
+    height: 100vh;
+}
+#head{
+    background: lightgoldenrodyellow;
+}
+.content {
+    color: red;
+}
+#menuPage{
+    color:teal;
+}
+#aboutPage{
+    color:darkblue;
+}
